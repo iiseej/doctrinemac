@@ -3,7 +3,6 @@
 namespace Imie\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 
-
 /**
  * @Table(name="Produit")
  * @Entity
@@ -24,12 +23,12 @@ class Produit
     private $nom;
 
     /**
-     * @var ArrayCollection Produit $clients
-     *
-     * Inverse Side
-     *
-     * @ManyToMany(targetEntity="Client", mappedBy="produits", cascade={"persist", "merge"})
-     */
+         * @var ArrayCollection Produit $clients
+         *
+         * Inverse Side
+         *
+         * ManyToMany(targetEntity="Client", mappedBy="produits", cascade={"persist", "merge"})
+         */
     private $clients;
 
     /**

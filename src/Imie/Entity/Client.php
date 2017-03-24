@@ -1,7 +1,7 @@
 <?php
-
-namespace  Imie\Entity;
+namespace Imie\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @Table(name="Client")
  * @Entity
@@ -20,17 +20,17 @@ class Client
      * @Column(name="nom", type="string", length=45, nullable=true)
      */
     private $nom;
-
     /**
-     * @var ArrayCollection Produit $produits
-     * Owning Side
-     *
-     * @ManyToMany(targetEntity="Produit", inversedBy="clients", cascade={"persist", "merge"})
-     * @JoinTable(name="Acheter",
-     *   joinColumns={@JoinColumn(name="Client_idClient", referencedColumnName="idClient")},
-     *   inverseJoinColumns={@JoinColumn(name="Produit_idProduit", referencedColumnName="idProduit")}
-     * )
-     */
+         * @var ArrayCollection Produit $produits
+         * Owning Side
+         *
+         * @ManyToMany(targetEntity="Produit", inversedBy="clients", cascade={"persist", "merge"})
+         * @JoinTable(name="Acheter",
+         *   joinColumns={@JoinColumn(name="Client_idClient", referencedColumnName="idClient")},
+         *   inverseJoinColumns={@JoinColumn(name="Produit_idProduit", referencedColumnName="idProduit")}
+         * )
+         */
+
     private $produits;
 
     /**
