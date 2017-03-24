@@ -1,6 +1,9 @@
 <?php
 namespace Imie\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
+
 /**
  * @Table(name="Region")
  * @Entity
